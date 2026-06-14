@@ -2,7 +2,7 @@ name: feature-nodejs-pipeline
 on: [push]
 jobs:
   feature-nodejs-pipeline:
-    uses: heman-devops/workflows/.github/workglows/feature-nodejs-pipeline.yaml@main
+    uses: heman-devops/workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
     with:
       project: roboshop
       component: catalogue
