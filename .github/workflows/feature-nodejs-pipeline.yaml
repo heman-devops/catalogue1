@@ -11,3 +11,4 @@ jobs:
       component: catalogue
       environment: production
     secrets: inherit
+    
