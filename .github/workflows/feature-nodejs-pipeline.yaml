@@ -5,13 +5,13 @@ permissions:
   statuses: write
 jobs:
   feature-nodejs-pipeline:
-  if: github.ref != 'refs/heads/main'
-  uses: heman-devops/workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
-  with:
-    project: roboshop
-    component: catalogue
-    environment: dev
-  secrets: inherit
+    if: github.ref != 'refs/heads/main'
+    uses: heman-devops/workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
+    with:
+      project: roboshop
+      component: catalogue
+      environment: dev
+    secrets: inherit
 
   dev-nodejs-pipeline:
     if: github.ref == 'refs/heads/main'
@@ -21,5 +21,3 @@ jobs:
       component: catalogue
       environment: dev
     secrets: inherit
-
-    
