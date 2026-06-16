@@ -1,4 +1,4 @@
-name: feature-nodejs-pipeline
+name: non-prod-pipeline
 on:
   workflow_dispatch:
     inputs:
