@@ -1,0 +1,23 @@
+name: feature-nodejs-pipeline
+on: [push]
+permissions:
+  contents: read
+  statuses: write
+jobs:
+  feature-nodejs-pipeline:
+    if: github.ref != 'refs/heads/main'
+    uses: heman-devops/workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
+    with:
+      project: roboshop
+      component: catalogue
+      environment: production
+    secrets: inherit
+
+  dev-nodejs-pipeline:
+    if: github.ref != 'refs/heads/main'
+    uses: heman-devops/workflows/.github/workflows/dev-nodejs-pipeline.yaml@main
+    with:
+      project: roboshop
+      component: catalogue
+      environment: dev
+    secrets: inherit
