@@ -1,5 +1,8 @@
 name: feature-nodejs-pipeline
 on: [push]
+permissions:
+  contents: read
+  statuses: write
 jobs:
   feature-nodejs-pipeline:
     uses: heman-devops/workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
